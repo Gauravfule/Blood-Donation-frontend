@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Blood Donor Registration</title>
+    <style>
+        body, html {
+            height: 100%;
+        }
+
+        /* Ensure the main content takes up at least 100% of the viewport height */
+        .content-wrapper {
+            min-height: calc(100vh - 70px); /* Account for the height of the footer */
+        }
+
+        footer {
+            height: 70px;
+        }
+
+        .form-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            background-color: #229fed;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .submit-btn {
+            background-color: #229fed;
+            color: white;
+            border: none;
+        }
+
+        .submit-btn:hover {
+            background-color: #1b8ed1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Bootstrap Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <!-- Logo Section -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="logo1.png" alt="Blood Donation Logo" width="45" height="45" class="me-2">
+                    <span class="fs-4" style="font-family:cursive;">LIFE SHARE</span>
+                </a>
+
+                <!-- Toggler for Mobile View -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Register Link -->
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center" href="#">
+                                <i class="fa-solid fa-user-plus fa-lg me-2" style="color: #f4f7fa;"></i>Blood Donor Register Here
+                            </a>
+                        </li>
+                        <!-- Find Donor Link -->
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center" href="#">
+                                <i class="fas fa-magnifying-glass fa-lg me-2"></i>Find a Blood Donor
+                            </a>
+                        </li>
+                        <!-- Post Blood Request Link -->
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center" href="#">
+                                <i class="fa-regular fa-envelope-open fa-lg me-2"></i>Post Your Blood Request
+                            </a>
+                        </li>
+                        <!-- Find Service Organization Link -->
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center" href="#">
+                                <i class="fa-solid fa-handshake-angle fa-lg me-2"></i>Find a Service Organization
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container content-wrapper my-5">
+        <div class="container">
+            <div class="form-container">
+                <h2>BLOOD DONOR REGISTER</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="Nameofdonor" class="form-label">Name Of Donor:</label>
+                        <input type="text" class="form-control" id="Nameofdonor" name="Nameofdonor" placeholder="Enter your name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="bloodGroup" class="form-label">Blood Group:</label>
+                        <select id="bloodGroup" class="form-select">
+                            <option selected>Select a Blood Group</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+
+                    <h5 style="background-color: #a19f9f; padding: 5px;">Contact Information</h5>
+
+                    <div class="mb-3">
+                        <label for="Mobile" class="form-label">Mobile Number:</label>
+                        <input type="number" class="form-control" id="Mobile" name="Mobilenumber" placeholder="Enter your mobile number">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="country" class="form-label">Select Country:</label>
+                        <select id="country" class="form-select">
+                            <option selected>Select Country</option>
+                            <option value="IN">India</option>
+                            <option value="US">United States</option>
+                            <option value="UK">United Kingdom</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="state" class="form-label">Select State:</label>
+                        <select id="state" class="form-select">
+                            <option selected>Select State</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="district" class="form-label">Select District:</label>
+                        <select id="district" class="form-select">
+                            <option selected>Select District</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="city" class="form-label">Select City:</label>
+                        <select id="city" class="form-select">
+                            <option selected>Select City</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail ID:</label>
+                        <input type="email" class="form-control" id="email" name="E-mail" placeholder="Enter your email">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="UserID" class="form-label">User ID:</label>
+                        <input type="text" class="form-control" id="UserID" name="UserID" placeholder="Enter your User ID">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Re-type-password" class="form-label">Re-type Password:</label>
+                        <input type="password" class="form-control" id="Re-type-password" name="password" placeholder="Re-enter password">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="availability" class="form-label">Please confirm your availability to donate blood:</label>
+                        <select id="availability" class="form-select">
+                            <option selected>Available</option>
+                            <option>Unavailable</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="checkbox" id="authorize" class="form-check-input">
+                        <label for="authorize" class="form-check-label">
+                            I authorize this website to display my name and telephone number so that the needy could contact me in case of an emergency.
+                        </label>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn submit-btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer style="background-color: rgb(42, 41, 41); color: white;">
+        <p class="text-center">COPYRIGHT © 2020<br>Blood Bank & Donation Management<br>ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap
